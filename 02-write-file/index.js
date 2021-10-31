@@ -11,6 +11,10 @@ const rl = readline.createInterface({
 const filePath = path.join(__dirname, "text.txt");
 
 rl.question("Enter your text:\n", (userInput) => {
+  if (userInput.toLowerCase() == "exit") {
+    rl.close();
+  }
+
   fs.writeFile(filePath, userInput, (error) => {
     error ? console.log(error) : null;
   });
