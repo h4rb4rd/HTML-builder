@@ -1,7 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 
-const src = path.join(__dirname, "css");
+const src = path.join(__dirname, "styles");
 const app = path.join(__dirname, "project-dist");
 const bundle = path.join(app, "bundle.css");
 

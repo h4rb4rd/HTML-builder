@@ -19,6 +19,10 @@ rl.question("Enter your text:\n", (userInput) => {
     error ? console.log(error) : null;
   });
   rl.on("line", (userInput) => {
+    if (userInput.toLowerCase() == "exit") {
+      rl.close();
+    }
+
     fs.appendFile(filePath, userInput, (error) => {
       error ? console.log(error) : null;
     });
